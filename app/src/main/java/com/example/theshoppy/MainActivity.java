@@ -10,8 +10,8 @@ import android.widget.AutoCompleteTextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String CountryList[] = { "Canada","India","USA", "Rusia", "Australia", "UK", "Brazil",
-                            "Italy", "Cuba", "Africa" , "Germany"};
+    String ProvinceList[] = {"Ontario", "Quebec", "Alberta" ,"Saskatchewan", "Manitoba",
+                                "New Brunswick", "Nova Scotia"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar);
 
-        AutoCompleteTextView autoCountries = (AutoCompleteTextView)findViewById(R.id.autoListCountries);
-        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, CountryList);
-        autoCountries.setAdapter(adapter1);
+        AutoCompleteTextView autoProvinces = (AutoCompleteTextView)findViewById(R.id.autoListProvinces);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, ProvinceList);
+        autoProvinces.setAdapter(adapter1);
 
 
     }
