@@ -9,6 +9,7 @@ import android.text.InputType;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
+import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,6 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     String ProvinceList[] = {"Ontario", "Quebec", "Alberta" ,"Saskatchewan", "Manitoba",
                                 "New Brunswick", "Nova Scotia"};
+    String Brands[] = {"HP", "Dell", "Lenovo"};
+
     DatePickerDialog datePicker;
     EditText edtDate;
     RadioGroup radioGroup;
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnShowDate;
     TextView txtDate;
     ScrollView sViewDesktop, sViewLaptop;
+    Spinner spinnerB;
 
 
     @Override
@@ -89,5 +94,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        spinnerB = (Spinner)findViewById(R.id.spinnerBrands);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, Brands);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerB.setAdapter(adapter2);
     }
 }
