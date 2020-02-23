@@ -7,11 +7,16 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -23,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
                                 "New Brunswick", "Nova Scotia"};
     DatePickerDialog datePicker;
     EditText edtDate;
+    RadioGroup radioGroup;
+    RadioButton radioDesktop;
+    RadioButton radioLaptop;
     Button btnShowDate;
     TextView txtDate;
+    ScrollView sViewDesktop, sViewLaptop;
 
 
     @Override
@@ -58,6 +67,26 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }, year, month, day);
                 datePicker.show();
+            }
+        });
+
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        radioDesktop = findViewById(R.id.radioDesktop);
+        radioLaptop = findViewById(R.id.radioLaptop);
+
+        sViewDesktop = findViewById(R.id.scrollViewDesktop);
+        sViewLaptop = findViewById(R.id.scrollViewLaptop);
+
+        radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radioDesktop){
+                    sViewDesktop.setVisibility(View.VISIBLE);
+                    sViewLaptop.setVisibility(View.GONE);
+            } else if (checkedId == R.id.radioLaptop) {
+                    sViewLaptop.setVisibility(View.VISIBLE);
+                    sViewDesktop.setVisibility(View.GONE);
+                }
             }
         });
     }
