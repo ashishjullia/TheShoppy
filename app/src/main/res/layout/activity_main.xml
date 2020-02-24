@@ -22,10 +22,10 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="15sp"
                 android:textStyle="bold"
-                android:text="Name" />
+                android:text="Name :" />
 
             <EditText
-                android:id="@+id/editName"
+                android:id="@+id/editUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:layout_marginLeft="15sp"
             android:textStyle="bold"
-            android:text="Province" />
+            android:text="Province :" />
 
         <AutoCompleteTextView
             android:id="@+id/autoListProvinces"
@@ -71,7 +71,7 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="15sp"
                 android:textStyle="bold"
-                android:text="Date" />
+                android:text="Date :" />
 
             <EditText
                 android:id="@+id/editDate"
@@ -95,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
                 android:layout_weight="1"
-                android:text="Type Of Computer"
+                android:text="Type Of Computer :"
                 android:textStyle="bold" />
 
             <RadioGroup
@@ -122,7 +122,7 @@
         <ScrollView
             android:id="@+id/scrollViewDesktop"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="210dp"
             android:visibility="gone">
 
             <LinearLayout
@@ -146,19 +146,19 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView4"
+                            android:id="@+id/imagedelldeskto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/delldesktop" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
+                            android:id="@+id/imagehpdesktop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/hpdesktop" />
 
                         <ImageView
-                            android:id="@+id/imageView7"
+                            android:id="@+id/imagelenovodesktop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/lenovodesktop" />
@@ -169,7 +169,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="210dp"
             android:visibility="gone"
             android:id="@+id/scrollViewLaptop">
 
@@ -194,19 +194,19 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/imageView8"
+                            android:id="@+id/imagedelllaptop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/delllaptop" />
 
                         <ImageView
-                            android:id="@+id/imageView9"
+                            android:id="@+id/imagehplaptop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/hplaptop" />
 
                         <ImageView
-                            android:id="@+id/imageView10"
+                            android:id="@+id/imagelenovolaptop"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             app:srcCompat="@drawable/lenovolaptop" />
@@ -226,7 +226,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
                 android:layout_weight="1"
-                android:text="Brand"
+                android:text="Brand :"
                 android:textStyle="bold" />
 
             <Spinner
@@ -236,5 +236,148 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textExtras"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:text="SSD and/or Printer :"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chkBoxSSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SSD" />
+
+            <CheckBox
+                android:id="@+id/chkBoxPrinter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Printer" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textPeripherals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peripherals"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/spacePerLaptop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textPeripheralLaptop"
+                android:layout_width="258dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:text="Laptop :"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioPerLaptop"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioCoolingMat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cooling Mat" />
+
+                <RadioButton
+                    android:id="@+id/radioUSB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="USB C-HUB" />
+
+                <RadioButton
+                    android:id="@+id/radioLaptopStand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Laptop Stand" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spacePerDesktop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textPeripheralDesktop"
+                android:layout_width="258dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="15sp"
+                android:layout_weight="1"
+                android:text="Desktop :"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioPerDesktop"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/radioWebcam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Webcam" />
+
+                <RadioButton
+                    android:id="@+id/radioExternalHardDrive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="External Hard Drive" />
+
+                <RadioButton
+                    android:id="@+id/radioNone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="None" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout" />
+
+        <TextView
+            android:id="@+id/textReportGenerated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Invoice"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="12" />
     </LinearLayout>
 </ScrollView>
